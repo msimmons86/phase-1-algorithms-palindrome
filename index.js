@@ -1,9 +1,32 @@
+function reverse(word) {
+  const wordArray = word.split("")
+  const reversedWordArray = wordArray.reverse()
+  const reversedWord = reversedWordArray.join("")
+  return reversedWord
+  // return word.split("").reverse().join
+
+}
+
+
 function isPalindrome(word) {
-  // Write your algorithm here
+
+//  how do we reverse a string?
+const reversedWord = reverse(word)
+
+// check reversed word
+if (word === reversedWord) {
+  return true
+ } else {
+   return false
+ }
 }
 
 /* 
   Add your pseudocode here
+
+  check the string and return true
+  else
+  return false
 */
 
 /*
@@ -14,6 +37,7 @@ function isPalindrome(word) {
 if (require.main === module) {
   // add your own custom tests in here
   console.log("Expecting: true");
+
   console.log("=>", isPalindrome("racecar"));
 
   console.log("");
@@ -22,4 +46,4 @@ if (require.main === module) {
   console.log("=>", isPalindrome("robot"));
 }
 
-module.exports = isPalindrome;
+module.exports = isPalindrome
